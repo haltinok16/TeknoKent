@@ -1,0 +1,53 @@
+.image{
+	
+	width: 60px;
+	height: 60px;
+	border-radius: 30px;
+
+}
+
+.tekno-image{
+	
+	width: 180px;
+	height: 100px;
+	
+
+}
+
+.form-inline{
+
+	margin-left: 930px;
+
+}
+
+#navbarSupportedContent{
+	height: 100px;
+	background-color: black;
+}
+#navbarDropdown{
+	color: white;
+	margin-top: 10px;
+}
+#footer {
+	color: white;
+	background-color: black;
+	position: relative; 
+}
+.pagination {
+	margin-top: 20px;
+	margin-left: 600px;
+}
+.comment {
+	margin-top: 100px;
+	margin-left: 100px;
+	margin-right: 100px;
+	text-align: center;
+	color:#336699;
+}
+.icons .iconify{
+
+	width: 30px;
+	height: 30px;
+	margin: 100px 100px 0px 200px;
+	border-radius: 60px;
+	}

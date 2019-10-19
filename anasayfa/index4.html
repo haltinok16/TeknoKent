@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Çözüm Ortakları</title>
+	<link rel="stylesheet" type="text/css" href="style4.css">
+	<script src="https://code.iconify.design/1/1.0.0-rc6/iconify.min.js"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+  	<img class="tekno-image" src="teknokent.jpg">
+    
+    <form class="form-inline">
+      <ul class="navbar-nav mr-auto">
+	
+      <li class="nav-item">
+        <img class="image" src="user.jpg" class="nav-link" href="#">
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Username
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Hesap Ayarları</a>
+          <a class="dropdown-item" href="#">Çıkış</a>
+        </div>
+      </li>
+    </ul>
+    </form>
+  </div>
+</nav>
+
+<div class="tab">
+  <a href="#" data-toggle="tooltip" title="Daha Fazla Bilgi İçin Tıklayınız"><button class="tablinks" onclick="openCity(event, 'Hüseyin Bey')">Hüseyin Bey</button></a>
+  <a href="#" data-toggle="tooltip" title="Daha Fazla Bilgi İçin Tıklayınız"><button class="tablinks" onclick="openCity(event, 'İlhan Bey')">İlhan Bey</button></a>
+  <a href="#" data-toggle="tooltip" title="Daha Fazla Bilgi İçin Tıklayınız"><button class="tablinks" onclick="openCity(event, 'Hülya Hanım')">Hülya Hanım</button></a>
+</div>
+
+<div id="Hüseyin Bey" class="tabcontent">
+  <h3>Prof. Dr. Hüseyin BAĞ</h3>
+  <img id="myImg" src="gorsel.jpg" alt="Hüseyin Bey" style="width:100%;max-width:300px">
+  <p>Lisans     : Orta Doğu Teknik Üniversitesi, Kimya Öğretmenliği, 1990.<br>
+  Y. Lisans :  Gazi Üniversitesi, Analitik Kimya, 1995.<br>
+  Doktora  : Gazi Üniversitesi , Analitik Kimya, 1998.</p>
+   <div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="gorsel">
+  <div id="caption"></div>
+  </div>
+  <script>
+var modal = document.getElementById('myModal');
+
+var img = document.getElementById('myImg');
+var modalImg = document.getElementById("gorsel");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+var span = document.getElementsByClassName("close")[0];
+
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+</div>
+
+<div id="İlhan Bey" class="tabcontent">
+  <h3>Doç. Dr. İlhan KÜÇÜKKAPLAN</h3>
+  <img src="gorsel2.jpg" alt="İlhan Bey" width="450px" height="250px">
+  <p>Ana Bilim Dalı: Uluslararası Finans <br>
+  E-posta: ikkaplan@pau.edu.tr<br>
+  Telefon: (0258) 296 2816</p> 
+
+</div>
+
+<div id="Hülya Hanım" class="tabcontent">
+  <h3>Hülya Hanım</h3>
+    <img id="myImg" src="gorsel3.jpg" alt="Hülya Hanım" style="width:100%;max-width:300px">
+  <p>TEKNOKENT SÜREÇ YÖNETİMİ SORUMLUSU<br>
+  gkojuk@pauteknokent.com.tr</p> 
+  <div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="gorsel3">
+  <div id="caption"></div>
+  </div>
+</div>
+
+
+
+
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+
+
+<footer id="footer">
+ <div class="container text-center text-md-left mt-5">
+      <div class="row mt-3">
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <h6 class="text-uppercase font-weight-bold"><br>İletişim Bilgileri</h6>
+          <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <i class="fas fa-home mr-3"></i>Çamlaraltı Mah. Hüseyin Yılmaz Cad. No:67 Pamukkale/Denizli</p>
+          <p>
+            <i class="fas fa-envelope mr-3"></i> info@example.com</p>
+          <p>
+            <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
+          <p>
+            <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
+    </div>
+</footer>
+</body>
+</html>
